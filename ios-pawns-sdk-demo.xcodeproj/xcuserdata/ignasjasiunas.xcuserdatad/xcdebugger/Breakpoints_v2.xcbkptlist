@@ -14,9 +14,9 @@
             filePath = "../ios-pawns-sdk/Sources/Pawns/Sources/API/Service/Pawns.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
-            landmarkName = "onReconnect(continuation:)"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "onRequirementChange()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -30,9 +30,9 @@
             filePath = "../ios-pawns-sdk/Sources/Pawns/Sources/API/Service/Pawns.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
-            landmarkName = "onReconnect(continuation:)"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "onRequirementChange()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

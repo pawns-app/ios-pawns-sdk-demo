@@ -1,0 +1,15 @@
+{
+  "originHash" : "f4269095db2e2182df4166bf8e767877c10cf18e8bd62b1a16c6e2ca30571739",
+  "pins" : [
+    {
+      "identity" : "ios-pawns-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pawns-app/ios-pawns-sdk",
+      "state" : {
+        "branch" : "main",
+        "revision" : "80cdb80a5dbb4fdcccc99c21007b90237647e51d"
+      }
+    }
+  ],
+  "version" : 3
+}

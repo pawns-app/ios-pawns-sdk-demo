@@ -3,10 +3,6 @@ import Pawns
 
 struct ContentView: View {
     
-    private let pawns: Pawns = .init(
-        apiKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZGsiOnRydWUsImV4cCI6MjAzNzM0NTYzMSwianRpIjoiMDFKM1E1RjBUNk42QjAwRFY5UUdQVkdZSFEiLCJpYXQiOjE3MjE5ODU2MzEsInN1YiI6IjAxR05WRTFTUk1KVlJCQUdORkYzRkM5VEhCIn0.L9W9TqoIROBo7plSLXE34SdekFR8YyHFm0XHU9mSmsQ"
-    )
-    
     @State private var status: Pawns.Status = .notRunning(.stopped)
     @State private var isPresented: Bool = false
     @State private var statuses: [String] = []
@@ -40,7 +36,7 @@ struct ContentView: View {
                             
                             Toggle(
                                 isOn: .init(
-                                    get: { self.pawns.isRunning },
+                                    get: { Pawns.isRunning() },
                                     set: { _ in Task { await self.toggle() } }
                                 ),
                                 label: {
@@ -60,7 +56,7 @@ struct ContentView: View {
                 
                 Button(
                     "Force Stop",
-                    action: { self.pawns.stop() }
+                    action: { Pawns.stop() }
                 )
                 .font(.callout)
                 .foregroundStyle(Color.red)
@@ -86,12 +82,12 @@ struct ContentView: View {
     // MARK: - API
     
     private func toggle() async {
-        if self.pawns.isRunning {
-            self.pawns.stop()
+        if Pawns.isRunning() {
+            Pawns.stop()
         } else {
             self.statuses = []
             Task {
-                for await status in await self.pawns.start() {
+                for await status in await Pawns.start() {
                     self.statuses.append(String(describing: status))
                     self.status = status
                     self.isPresented = status.isError
