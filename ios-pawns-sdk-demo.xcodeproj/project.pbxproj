@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C02298432C63AA3500B9D736 /* Pawns in Frameworks */ = {isa = PBXBuildFile; productRef = C02298422C63AA3500B9D736 /* Pawns */; };
+		C02AB00C2C64EC76009AD868 /* Pawns in Frameworks */ = {isa = PBXBuildFile; productRef = C02AB00B2C64EC76009AD868 /* Pawns */; };
 		C07ABA442C6399C3008B1B6D /* Pawns in Frameworks */ = {isa = PBXBuildFile; productRef = C07ABA432C6399C3008B1B6D /* Pawns */; };
 		C098BD7D2C53A242009E9E01 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C098BD7C2C53A242009E9E01 /* App.swift */; };
 		C098BD7F2C53A242009E9E01 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C098BD7E2C53A242009E9E01 /* ContentView.swift */; };
 		C098BD812C53A243009E9E01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C098BD802C53A243009E9E01 /* Assets.xcassets */; };
 		C098BD842C53A243009E9E01 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C098BD832C53A243009E9E01 /* Preview Assets.xcassets */; };
 		C098BD8C2C53A28E009E9E01 /* Pawns in Frameworks */ = {isa = PBXBuildFile; productRef = C098BD8B2C53A28E009E9E01 /* Pawns */; };
+		C0D1F95A2C91914100D49C02 /* Pawns in Frameworks */ = {isa = PBXBuildFile; productRef = C0D1F9592C91914100D49C02 /* Pawns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +30,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C02298432C63AA3500B9D736 /* Pawns in Frameworks */,
+				C02AB00C2C64EC76009AD868 /* Pawns in Frameworks */,
 				C07ABA442C6399C3008B1B6D /* Pawns in Frameworks */,
+				C0D1F95A2C91914100D49C02 /* Pawns in Frameworks */,
 				C098BD8C2C53A28E009E9E01 /* Pawns in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,7 +94,8 @@
 			packageProductDependencies = (
 				C098BD8B2C53A28E009E9E01 /* Pawns */,
 				C07ABA432C6399C3008B1B6D /* Pawns */,
-				C02298422C63AA3500B9D736 /* Pawns */,
+				C02AB00B2C64EC76009AD868 /* Pawns */,
+				C0D1F9592C91914100D49C02 /* Pawns */,
 			);
 			productName = "ios-pawns-sdk-demo";
 			productReference = C098BD792C53A242009E9E01 /* ios-pawns-sdk-demo.app */;
@@ -123,7 +126,7 @@
 			);
 			mainGroup = C098BD702C53A242009E9E01;
 			packageReferences = (
-				C02298412C63AA3500B9D736 /* XCRemoteSwiftPackageReference "ios-pawns-sdk" */,
+				C0D1F9582C91914100D49C02 /* XCRemoteSwiftPackageReference "ios-pawns-sdk" */,
 			);
 			productRefGroup = C098BD7A2C53A242009E9E01 /* Products */;
 			projectDirPath = "";
@@ -360,20 +363,19 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C02298412C63AA3500B9D736 /* XCRemoteSwiftPackageReference "ios-pawns-sdk" */ = {
+		C0D1F9582C91914100D49C02 /* XCRemoteSwiftPackageReference "ios-pawns-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pawns-app/ios-pawns-sdk";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C02298422C63AA3500B9D736 /* Pawns */ = {
+		C02AB00B2C64EC76009AD868 /* Pawns */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C02298412C63AA3500B9D736 /* XCRemoteSwiftPackageReference "ios-pawns-sdk" */;
 			productName = Pawns;
 		};
 		C07ABA432C6399C3008B1B6D /* Pawns */ = {
@@ -382,6 +384,11 @@
 		};
 		C098BD8B2C53A28E009E9E01 /* Pawns */ = {
 			isa = XCSwiftPackageProductDependency;
+			productName = Pawns;
+		};
+		C0D1F9592C91914100D49C02 /* Pawns */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0D1F9582C91914100D49C02 /* XCRemoteSwiftPackageReference "ios-pawns-sdk" */;
 			productName = Pawns;
 		};
 /* End XCSwiftPackageProductDependency section */
