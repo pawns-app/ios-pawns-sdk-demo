@@ -32,25 +32,17 @@ struct ContentView: View {
                             .font(.subheadline)
                             .foregroundStyle(Color.secondary)
         
-                        ZStack {
-                            
-                            Toggle(
-                                isOn: .init(
-                                    get: { Pawns.isRunning() },
-                                    set: { _ in Task { await self.toggle() } }
-                                ),
-                                label: {
-                                    EmptyView()
-                                }
-                            )
-                            .labelsHidden()
-                            .toggleStyle(.switch)
-                            .opacity(self.status.isLoading ? .zero : 1)
-                            
-                            if self.status.isLoading {
-                                ProgressView()
-                            }
+                        if self.status.isLoading {
+                            ProgressView()
                         }
+                    }
+                    
+                    if !Pawns.isRunning() {
+                        Button(
+                            "Connect",
+                            action: { Task { await self.connect() } }
+                        )
+                        .font(.callout)
                     }
                 }
                 
@@ -61,8 +53,11 @@ struct ContentView: View {
                 .font(.callout)
                 .foregroundStyle(Color.red)
                 
-                Section {
-                    events()
+                if !self.statuses.isEmpty {
+                    Section(
+                        header: Text("Events"),
+                        content: events
+                    )
                 }
                 
             }
@@ -81,17 +76,13 @@ struct ContentView: View {
     
     // MARK: - API
     
-    private func toggle() async {
-        if Pawns.isRunning() {
-            Pawns.stop()
-        } else {
-            self.statuses = []
-            Task {
-                for await status in await Pawns.start() {
-                    self.statuses.append(String(describing: status))
-                    self.status = status
-                    self.isPresented = status.isError
-                }
+    private func connect() async {
+        self.statuses = []
+        Task {
+            for await status in await Pawns.start() {
+                self.statuses.append(String(describing: status))
+                self.status = status
+                self.isPresented = status.isError
             }
         }
     }
@@ -111,13 +102,15 @@ private extension Pawns.Status {
             return "Running"
         case .notRunning(.waitingForWifi):
             return "Waiting For Wi-Fi"
+        case .notRunning(.detectedVPN):
+            return "VPN detected"
         default:
             return "Not Running"
         }
     }
     
     var isOn: Bool {
-        self == .running || self == .starting || self == .notRunning(.waitingForWifi)
+        self == .running || self == .starting || self == .notRunning(.waitingForWifi) || self == .notRunning(.detectedVPN)
     }
     
     var isLoading: Bool {
