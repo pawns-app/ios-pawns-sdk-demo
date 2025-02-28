@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		C098BD812C53A243009E9E01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C098BD802C53A243009E9E01 /* Assets.xcassets */; };
 		C098BD842C53A243009E9E01 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C098BD832C53A243009E9E01 /* Preview Assets.xcassets */; };
 		C098BD8C2C53A28E009E9E01 /* Pawns in Frameworks */ = {isa = PBXBuildFile; productRef = C098BD8B2C53A28E009E9E01 /* Pawns */; };
+		C0F844212D71E45300B6B568 /* Pawns in Frameworks */ = {isa = PBXBuildFile; productRef = C0F844202D71E45300B6B568 /* Pawns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C02AB00C2C64EC76009AD868 /* Pawns in Frameworks */,
+				C0F844212D71E45300B6B568 /* Pawns in Frameworks */,
 				C07ABA442C6399C3008B1B6D /* Pawns in Frameworks */,
 				C0703D572CF46F9300A992AA /* Pawns in Frameworks */,
 				C098BD8C2C53A28E009E9E01 /* Pawns in Frameworks */,
@@ -96,6 +98,7 @@
 				C07ABA432C6399C3008B1B6D /* Pawns */,
 				C02AB00B2C64EC76009AD868 /* Pawns */,
 				C0703D562CF46F9300A992AA /* Pawns */,
+				C0F844202D71E45300B6B568 /* Pawns */,
 			);
 			productName = "ios-pawns-sdk-demo";
 			productReference = C098BD792C53A242009E9E01 /* ios-pawns-sdk-demo.app */;
@@ -126,7 +129,7 @@
 			);
 			mainGroup = C098BD702C53A242009E9E01;
 			packageReferences = (
-				C0703D552CF46F9300A992AA /* XCLocalSwiftPackageReference "../ios-pawns-sdk" */,
+				C0F8441F2D71E45300B6B568 /* XCRemoteSwiftPackageReference "ios-pawns-sdk" */,
 			);
 			productRefGroup = C098BD7A2C53A242009E9E01 /* Products */;
 			projectDirPath = "";
@@ -372,12 +375,16 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		C0703D552CF46F9300A992AA /* XCLocalSwiftPackageReference "../ios-pawns-sdk" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = "../ios-pawns-sdk";
+/* Begin XCRemoteSwiftPackageReference section */
+		C0F8441F2D71E45300B6B568 /* XCRemoteSwiftPackageReference "ios-pawns-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pawns-app/ios-pawns-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.4;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		C02AB00B2C64EC76009AD868 /* Pawns */ = {
@@ -394,6 +401,11 @@
 		};
 		C098BD8B2C53A28E009E9E01 /* Pawns */ = {
 			isa = XCSwiftPackageProductDependency;
+			productName = Pawns;
+		};
+		C0F844202D71E45300B6B568 /* Pawns */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0F8441F2D71E45300B6B568 /* XCRemoteSwiftPackageReference "ios-pawns-sdk" */;
 			productName = Pawns;
 		};
 /* End XCSwiftPackageProductDependency section */
