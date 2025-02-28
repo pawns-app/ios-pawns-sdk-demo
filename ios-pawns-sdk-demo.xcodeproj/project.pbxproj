@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		C02AB00C2C64EC76009AD868 /* Pawns in Frameworks */ = {isa = PBXBuildFile; productRef = C02AB00B2C64EC76009AD868 /* Pawns */; };
+		C0703D572CF46F9300A992AA /* Pawns in Frameworks */ = {isa = PBXBuildFile; productRef = C0703D562CF46F9300A992AA /* Pawns */; };
 		C07ABA442C6399C3008B1B6D /* Pawns in Frameworks */ = {isa = PBXBuildFile; productRef = C07ABA432C6399C3008B1B6D /* Pawns */; };
 		C098BD7D2C53A242009E9E01 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C098BD7C2C53A242009E9E01 /* App.swift */; };
 		C098BD7F2C53A242009E9E01 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C098BD7E2C53A242009E9E01 /* ContentView.swift */; };
 		C098BD812C53A243009E9E01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C098BD802C53A243009E9E01 /* Assets.xcassets */; };
 		C098BD842C53A243009E9E01 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C098BD832C53A243009E9E01 /* Preview Assets.xcassets */; };
 		C098BD8C2C53A28E009E9E01 /* Pawns in Frameworks */ = {isa = PBXBuildFile; productRef = C098BD8B2C53A28E009E9E01 /* Pawns */; };
-		C0D1F95A2C91914100D49C02 /* Pawns in Frameworks */ = {isa = PBXBuildFile; productRef = C0D1F9592C91914100D49C02 /* Pawns */; };
+		C0F844212D71E45300B6B568 /* Pawns in Frameworks */ = {isa = PBXBuildFile; productRef = C0F844202D71E45300B6B568 /* Pawns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +32,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C02AB00C2C64EC76009AD868 /* Pawns in Frameworks */,
+				C0F844212D71E45300B6B568 /* Pawns in Frameworks */,
 				C07ABA442C6399C3008B1B6D /* Pawns in Frameworks */,
-				C0D1F95A2C91914100D49C02 /* Pawns in Frameworks */,
+				C0703D572CF46F9300A992AA /* Pawns in Frameworks */,
 				C098BD8C2C53A28E009E9E01 /* Pawns in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,7 +97,8 @@
 				C098BD8B2C53A28E009E9E01 /* Pawns */,
 				C07ABA432C6399C3008B1B6D /* Pawns */,
 				C02AB00B2C64EC76009AD868 /* Pawns */,
-				C0D1F9592C91914100D49C02 /* Pawns */,
+				C0703D562CF46F9300A992AA /* Pawns */,
+				C0F844202D71E45300B6B568 /* Pawns */,
 			);
 			productName = "ios-pawns-sdk-demo";
 			productReference = C098BD792C53A242009E9E01 /* ios-pawns-sdk-demo.app */;
@@ -126,7 +129,7 @@
 			);
 			mainGroup = C098BD702C53A242009E9E01;
 			packageReferences = (
-				C0D1F9582C91914100D49C02 /* XCRemoteSwiftPackageReference "ios-pawns-sdk" */,
+				C0F8441F2D71E45300B6B568 /* XCRemoteSwiftPackageReference "ios-pawns-sdk" */,
 			);
 			productRefGroup = C098BD7A2C53A242009E9E01 /* Products */;
 			projectDirPath = "";
@@ -286,10 +289,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ios-pawns-sdk-demo/Preview Content\"";
-				DEVELOPMENT_TEAM = 4LG5X25B4Z;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -297,6 +300,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,9 +308,14 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pawns.app.ios-pawns-sdk-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,10 +324,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ios-pawns-sdk-demo/Preview Content\"";
-				DEVELOPMENT_TEAM = 4LG5X25B4Z;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -326,6 +335,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,9 +343,14 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pawns.app.ios-pawns-sdk-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -363,18 +378,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C0D1F9582C91914100D49C02 /* XCRemoteSwiftPackageReference "ios-pawns-sdk" */ = {
+		C0F8441F2D71E45300B6B568 /* XCRemoteSwiftPackageReference "ios-pawns-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pawns-app/ios-pawns-sdk";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.3;
+				minimumVersion = 0.0.4;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		C02AB00B2C64EC76009AD868 /* Pawns */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Pawns;
+		};
+		C0703D562CF46F9300A992AA /* Pawns */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Pawns;
 		};
@@ -386,9 +405,9 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = Pawns;
 		};
-		C0D1F9592C91914100D49C02 /* Pawns */ = {
+		C0F844202D71E45300B6B568 /* Pawns */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C0D1F9582C91914100D49C02 /* XCRemoteSwiftPackageReference "ios-pawns-sdk" */;
+			package = C0F8441F2D71E45300B6B568 /* XCRemoteSwiftPackageReference "ios-pawns-sdk" */;
 			productName = Pawns;
 		};
 /* End XCSwiftPackageProductDependency section */

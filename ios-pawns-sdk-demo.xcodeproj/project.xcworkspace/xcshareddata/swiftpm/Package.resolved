@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pawns-app/ios-pawns-sdk",
       "state" : {
-        "revision" : "e61b45a7cf7034fea03dfa8749acc1f15ce3edc6",
-        "version" : "0.0.3"
+        "revision" : "b563ff18e90a60fd3e2be8ac9632932cbdc60739",
+        "version" : "0.0.4"
       }
     }
   ],
