@@ -110,7 +110,14 @@ private extension Pawns.Status {
     }
     
     var isOn: Bool {
-        self == .running || self == .starting || self == .notRunning(.waitingForWifi) || self == .notRunning(.detectedVPN)
+        switch self {
+        case .running, .starting:
+            return true
+        case .notRunning(.waitingForWifi), .notRunning(.detectedVPN):
+            return true
+        default:
+            return false
+        }
     }
     
     var isLoading: Bool {
